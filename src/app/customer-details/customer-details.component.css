@@ -1,0 +1,21 @@
+.head
+  {
+    float: left;
+    padding-right: 50%;
+    margin-left: 15px;
+     }
+.info{
+    float: left;
+    margin-left: 15px;
+}
+.details{
+  float: left;
+  margin-left: 20px;
+  padding-right: 55%;}
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+}
+agm-map {
+  height: 300px;
+}

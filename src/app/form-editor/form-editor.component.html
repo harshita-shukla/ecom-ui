@@ -1,0 +1,26 @@
+<div class="editDetails">
+    <form [formGroup]= "customerForm" (ngSubmit)="onSubmit();">
+    <h3> Welcome</h3>
+    <label for="name">Name</label><input type="text" class="form-control" id="name" required [(ngModel)]="model.name" name="name" #name="ngModel">
+<div>
+    <label>Last Name: <input type="text" formControlName="lastname"></label>
+  </div><div>
+    <label> Gender: <mat-radio-group><input type="radio" formControlName="gender" value="female">
+    <label for="female">Female</label>
+    <input type="radio" formControlName="gender" value="male">
+    <label for="male">Male</label> </mat-radio-group> </label>
+    </div><div>
+    <label>Email: <input type="text" formControlName="email"></label>
+  </div><div>
+    <label>Address: <input type="text" formControlName="address"></label>
+  </div><div>
+    <label>City: <input type="text" formControlName="city"></label>
+  </div><div>
+    <label>State: <input type="text" formControlName="state"></label>
+  </div><div>
+    <label>Zip: <input type="text" formControlName="zip"></label>
+  </div><div>
+    <button type="submit" [disabled]="!customerForm.valid">Submit</button>
+    <button type="reset">Cancel</button>
+    </div></form>
+</div>

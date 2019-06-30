@@ -1,0 +1,49 @@
+<div>
+    <h3 float="left"> <i class="material-icons">person</i> &nbsp; Customers</h3>
+     <div >
+    <i class="material-icons">dashboard</i>
+    <a mat-button>Card View</a>&nbsp;
+    <i class="material-icons">list</i>
+    <button mat-button>List View</button>&nbsp;
+    <i class="material-icons">pin_drop</i>
+    <button mat-button>Map View</button>&nbsp;
+    <i class="material-icons">add</i>
+    <button mat-button>Add customer</button>
+    <p  class ="filter">Filter:</p><br/>
+    <input type="search" name="search" class ="filter"/>
+     </div>
+</div>
+
+<div>
+  <mat-grid-list cols="4" rows="4" rowHeight="2:2">
+    
+   <a *ngFor= "let customer of customers" routerLink= "/customerdetail/{{customer.id}}">
+    <mat-grid-tile >
+    <mat-card class="example-card">
+    <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{customer.firstname}} {{customer.lastname}}</mat-card-title>
+        <mat-card-subtitle>{{customer.address}} {{customer.city}} {{customer.state}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <button mat-button routerLink="/customers/customerorder/{{customer.id}}">View Orders</button>
+    </mat-card-content>
+    </mat-card>
+    </mat-grid-tile>
+</a>
+<div>
+    <ul>
+        <li>
+                <a> < </a>
+        </li>
+        <li>
+            <a>{{page}}</a>
+         </li>
+         <li>
+            <a>></a>
+         </li>
+    </ul>
+</div>    
+       
+</mat-grid-list>
+</div>
