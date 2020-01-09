@@ -1,3 +1,4 @@
+import { Order } from './order';
 export class Customers {
     id: number;
     firstname: string;
@@ -10,5 +11,5 @@ export class Customers {
       zip: string;
       dateOfBirth: string;
  
-  orders: any[];
+      orders: Order[];
 }

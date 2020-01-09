@@ -18,8 +18,8 @@
   <mat-grid-list cols="4" rows="4" rowHeight="2:2">
     
    <a *ngFor= "let customer of customers" routerLink= "/customerdetail/{{customer.id}}">
-    <mat-grid-tile >
-    <mat-card class="example-card">
+    <mat-grid-tile class="example-card">
+    <mat-card >
     <mat-card-header>
         <div mat-card-avatar class="example-header-image"></div>
         <mat-card-title>{{customer.firstname}} {{customer.lastname}}</mat-card-title>

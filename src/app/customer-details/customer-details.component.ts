@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { DashboardComponent } from '../dashboard/dashboard.component';
 import {Customers} from '../customers';
-
+import {Order} from '../order';
 import { Observable } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
 import { CustomerService } from '../customer.service';
